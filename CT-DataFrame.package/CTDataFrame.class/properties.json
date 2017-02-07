@@ -1,0 +1,17 @@
+{
+	"category" : "CT-DataFrame",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 2/2/2017 13:11",
+	"instvars" : [
+		"dataset",
+		"groupset",
+		"resultset",
+		"summary" ],
+	"name" : "CTDataFrame",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
