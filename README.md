@@ -1,7 +1,7 @@
 # CTDataFrame
 A 'dataframe'-like class built using Pharo (Smalltalk). Inspired by 'R'.
 
-| database dataframe dbResource modelData |
+`| database dataframe dbResource modelData |
 "populate dataframe ..."
 dataframe := CTDataFrame new.
 dbResource := CTDatabaseResource new.
@@ -25,4 +25,4 @@ dataframe groupBy: 'Month'; groupByMean: 'Takings'.
 dataframe summarize.
 
 "summarize data by group"
-dataframe groupBy: 'Month'; groupSummarize.
+dataframe groupBy: 'Month'; groupSummarize.`
