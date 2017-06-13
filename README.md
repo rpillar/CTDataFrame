@@ -1,7 +1,8 @@
 # CTDataFrame
 A 'dataframe'-like class built using Pharo (Smalltalk). Inspired by 'R'.
 
-```| database dataframe dbResource modelData |
+```
+| database dataframe dbResource modelData |
 "populate dataframe ..."
 dataframe := CTDataFrame new.
 dbResource := CTDatabaseResource new.
