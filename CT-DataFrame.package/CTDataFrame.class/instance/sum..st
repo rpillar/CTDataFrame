@@ -1,12 +1,8 @@
 calculate
 sum: aField
 
-	| myField myResult myValue |
+	| myField myFieldsDict |
 	myField := aField asSymbol.
-	myResult := 0.
-	self resultset do: [ :each | 
-		myValue := each instVarNamed: myField. 
-		myResult := myResult + myValue.
-	].
 	
-	^ myResult round: 2.
+	myFieldsDict := self rotate: self resultset.
+	^ ( myFieldsDict at: myField ) sum round: 2.

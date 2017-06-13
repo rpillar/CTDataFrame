@@ -1,14 +1,14 @@
 action
-rotate
+rotate: aCollection
 
 	| myFieldValue myFieldValues myValuesDict |
-	"deprecated - use rotate: <resultset>"
+
 	"rotate objects so that <field> values are in their own collections"
 	myValuesDict := Dictionary new.
 	
-	(resultset at: 1) class instVarNames do: [ :field |  
+	(aCollection at: 1) class instVarNames do: [ :field |  
 		myFieldValues := OrderedCollection new.
-		self resultset do: [ :each |  
+		aCollection do: [ :each |  
 			myFieldValue := each instVarNamed: field. 
 			( myFieldValue isNumber )
 				ifTrue: [ myFieldValues add: myFieldValue ]

@@ -3,16 +3,16 @@ summarize
 
 	"Min / Median / Mean / Max - of <number> fields in resultset - populate summary"
 	| myData myResults mySummary  myValuesDict |
-	
-	"rotate my resultset"
-	myValuesDict := self rotate.
-	
 	mySummary := Dictionary new.
-	(resultset at: 1) class instVarNames do: [ :field |
-		myData := myValuesDict at: field.
+		
+	"rotate my resultset"
+	myValuesDict := self rotate: self resultset.
+
+	myValuesDict keysDo: [ :groupKey |
+		myData := myValuesDict at: groupKey.
 		myResults := Dictionary new.
-		myResults at: 'max' put: myData max; at: 'min' put: myData min; at: 'mean' put: ( ( ( myData sum ) / myData size ) round: 2 ); at: 'median' put: myData median.
-		mySummary at: field put: myResults.
+		myResults at: 'max' put: myData max; at: 'min' put: myData min; at: 'mean' put: ( ( myData average ) round: 2 ); at: 'median' put: myData median.
+		mySummary at: groupKey put: myResults.
 	].
 
-	self summary: mySummary.
+	^ mySummary.
