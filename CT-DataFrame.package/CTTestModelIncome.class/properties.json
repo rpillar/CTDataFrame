@@ -1,0 +1,21 @@
+{
+	"category" : "CT-DataFrame",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"Takings",
+		"Donations",
+		"Total",
+		"Day",
+		"Week",
+		"Month",
+		"Year",
+		"CustNumbers" ],
+	"name" : "CTTestModelIncome",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANModel",
+	"type" : "normal" }
