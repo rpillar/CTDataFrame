@@ -2,6 +2,4 @@ select
 selectAll
 
 	self resultset: OrderedCollection new.
-	self dataset do: [ :each |  	
-			self resultset add: each	
-		].
+	self resultset: ( self dataset collect: [ :each | each ] ).
