@@ -1,0 +1,1 @@
+Base class for a 'shopping' channel. This application is a 'multi-channel' management app with features to make selling on many shopping platforms easy to manage.

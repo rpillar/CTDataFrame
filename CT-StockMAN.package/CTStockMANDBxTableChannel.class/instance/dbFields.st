@@ -1,0 +1,4 @@
+accessing
+dbFields
+
+	^ #( 'channelName' 'status' ).

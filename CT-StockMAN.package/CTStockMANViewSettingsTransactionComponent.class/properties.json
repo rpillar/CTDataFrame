@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RichardPillar 1/22/2018 08:27",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messageComponent"
+	],
+	"name" : "CTStockMANViewSettingsTransactionComponent",
+	"type" : "normal"
+}

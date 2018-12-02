@@ -6,5 +6,5 @@ selectLessThan: aField with: anArg
 	myField := aField asSymbol.
 	
 	self resultset: ( self dataset select: [ :each |   
-		( ( each instVarNamed: myField ) < anArg )
+		( ( each at: myField ) < anArg )
 	] ).

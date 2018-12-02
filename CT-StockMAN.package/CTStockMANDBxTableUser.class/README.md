@@ -1,0 +1,1 @@
+StockMAN User table - CTDBx definition.

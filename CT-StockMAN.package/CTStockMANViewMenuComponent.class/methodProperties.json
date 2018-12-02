@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"renderContentOn:" : "RichardPillar 1/15/2017 21:28",
+		"initialize" : "RichardPillar 10/19/2016 19:20",
+		"renderMenuAnalyticsOn:" : "RichardPillar 2/14/2017 21:51",
+		"renderPageSettingsOn:" : "RichardPillar 11/16/2016 08:08",
+		"renderPageInventoryOn:" : "RichardPillar 1/14/2017 19:36",
+		"renderPageAnalyticsOn:" : "RichardPillar 1/15/2017 21:32",
+		"renderMenuDashboardOn:" : "RichardPillar 2/14/2017 21:51",
+		"renderMenuLogoutOn:" : "RichardPillar 2/14/2017 21:47",
+		"renderPageDashboardOn:" : "RichardPillar 12/6/2016 19:06",
+		"renderMenuInventoryOn:" : "RichardPillar 2/14/2017 21:51",
+		"renderMenuSettingsOn:" : "RichardPillar 1/9/2018 08:19"
+	},
+	"class" : { }
+}

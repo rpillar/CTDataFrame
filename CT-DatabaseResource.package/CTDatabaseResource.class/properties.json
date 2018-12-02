@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "RichardPillar 2/13/2017 22:15",
+	"super" : "Object",
+	"category" : "CT-DatabaseResource",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DefaultLogin"
+	],
+	"instvars" : [
+		"database"
+	],
+	"name" : "CTDatabaseResource",
+	"type" : "normal"
+}

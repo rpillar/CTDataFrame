@@ -1,0 +1,1 @@
+An 'EBay' shop - currently the 'initialize' method populates the appropriate instance variables to allow connections etc. As there can be many EBay shops then the login / connection credentials will have to be (should be) stored elsewhere.

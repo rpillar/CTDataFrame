@@ -1,0 +1,1 @@
+I represent the top-level 'channel'. The only fields I hold are name and status ( 0 / 1 - active / inactive ). I do however have methods that represent the relations I have with other models - for example 'shops'.

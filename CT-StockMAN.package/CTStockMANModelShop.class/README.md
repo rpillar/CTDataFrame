@@ -1,0 +1,1 @@
+A channel may have one or many 'shops'. I represent the high-level details of an individual shop. Please note a shop can be a 'physical' or 'virtual' entity.

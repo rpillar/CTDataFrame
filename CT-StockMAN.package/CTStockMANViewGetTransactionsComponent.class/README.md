@@ -1,0 +1,1 @@
+Modal - process the rertrieval of transaction data from the  channel / shop. Retrieval of data can be immediate or can be schedule for some later time.

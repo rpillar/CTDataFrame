@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "RichardPillar 1/3/2017 14:37",
+	"super" : "CTStockMANModel",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"password",
+		"userName"
+	],
+	"name" : "CTStockMANModelUser",
+	"type" : "normal"
+}

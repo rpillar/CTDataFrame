@@ -1,0 +1,3 @@
+code-critics
+ruleRBCollectionProtocolRuleV1FalsePositive
+	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewSettingsTransactionComponent #parseShopName: #false)) #'2018-06-01T20:27:10.215078+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewHomeComponent #getShops #false)) #'2018-06-06T07:42:28.342702+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #getShopNames #false)) #'2018-06-06T07:48:47.682333+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #parseGetEBayCategoriesResponse: #false)) #'2018-06-06T07:49:26.451389+01:00') )

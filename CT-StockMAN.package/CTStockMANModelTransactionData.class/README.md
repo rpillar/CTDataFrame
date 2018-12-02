@@ -1,0 +1,1 @@
+Record data on the requests to retrieve transaction data from a chananel / shop.

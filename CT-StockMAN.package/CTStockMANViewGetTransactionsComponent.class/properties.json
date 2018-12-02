@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "RichardPillar 1/24/2018 08:13",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"channel",
+		"channelNames",
+		"endDate",
+		"messageComponent",
+		"shopCredentials",
+		"shopName",
+		"startDate",
+		"startTime",
+		"scheduleFlag",
+		"tableRowCounter"
+	],
+	"name" : "CTStockMANViewGetTransactionsComponent",
+	"type" : "normal"
+}

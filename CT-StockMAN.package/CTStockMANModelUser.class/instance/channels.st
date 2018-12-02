@@ -1,0 +1,3 @@
+relation
+channels
+	^ self relationChannels.

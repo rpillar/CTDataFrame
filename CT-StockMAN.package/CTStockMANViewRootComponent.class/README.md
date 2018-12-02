@@ -1,0 +1,1 @@
+This the main page for the StockMAN application - displays the data dashboard.

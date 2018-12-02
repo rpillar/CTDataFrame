@@ -1,0 +1,19 @@
+{
+	"instance" : {
+		"request" : "FirstnameLastname 7/25/2016 16:53",
+		"getEBayTrafficDataFrom:to:" : "RichardPillar 9/17/2018 08:37",
+		"request:" : "FirstnameLastname 7/25/2016 16:53",
+		"getEBaySellerList" : "RichardPillar 9/14/2018 08:41",
+		"getEBayTransactionsAll" : "RichardPillar 9/14/2018 08:38",
+		"initialize" : "RichardPillar 10/18/2016 08:19",
+		"getEBayCategories" : "RichardPillar 4/5/2018 08:31",
+		"getEBayOfficialTime" : "RichardPillar 3/2/2018 13:18",
+		"formatResponse:" : "RichardPillar 4/5/2018 08:34",
+		"getEBayTransactionsForDay" : "RichardPillar 9/14/2018 08:38",
+		"myEbay:" : "FirstnameLastname 7/20/2016 16:35",
+		"getEBayTransactionsForDaysStarting:ending:" : "RichardPillar 2/7/2018 08:28",
+		"myEbay" : "FirstnameLastname 7/20/2016 16:35",
+		"getEBayDetails" : "RichardPillar 9/4/2018 08:31"
+	},
+	"class" : { }
+}

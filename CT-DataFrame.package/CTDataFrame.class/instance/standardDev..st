@@ -12,7 +12,7 @@ standardDev: aField
 	
 	myCount := 1.
 	self resultset do: [ :each | 
-		myValue := each instVarNamed: myField. 
+		myValue := each at: myField. 
 		myValues at: myCount put: myValue.
 		myCount := myCount + 1.
 	].

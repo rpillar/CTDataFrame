@@ -1,0 +1,1 @@
+Display a summary of transaction retrieval (last 5 possibly - more displayed on a separate page !). Buttons to enable modals that give the user the option to retrieve or schedule a retrieval of transaction data from a channel / shop.

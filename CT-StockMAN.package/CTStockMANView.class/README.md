@@ -1,0 +1,1 @@
+Base class for all 'view's within StockMAN.

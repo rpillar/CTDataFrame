@@ -1,0 +1,3 @@
+code-critics
+ruleRBStringConcatenationRuleV1FalsePositive
+	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewSettingsTransactionComponent #parseShopName: #false)) #'2018-06-01T20:27:18.902989+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #getShopNames #false)) #'2018-06-06T07:48:45.297506+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #parseShopName: #false)) #'2018-06-06T07:51:10.629216+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewCredentialsComponent #validateCredentials: #false)) #'2018-06-08T08:49:40.723984+01:00') )

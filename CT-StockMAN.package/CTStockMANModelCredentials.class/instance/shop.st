@@ -1,0 +1,3 @@
+relation
+shop
+	^ self relationShop.

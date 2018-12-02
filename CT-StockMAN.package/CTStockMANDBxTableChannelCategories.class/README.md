@@ -1,0 +1,1 @@
+StockMAN ChannelCategories table - CTDBx definition.

@@ -1,0 +1,30 @@
+{
+	"instance" : {
+		"channel" : "RichardPillar 11/17/2016 13:09",
+		"validateAddShop" : "RichardPillar 3/27/2017 21:53",
+		"initialize" : "RichardPillar 6/1/2017 18:59",
+		"renderAddShopContentOn:" : "RichardPillar 1/31/2018 07:59",
+		"channel:" : "RichardPillar 11/17/2016 13:09",
+		"renderAddShopActionCloseOn:" : "RichardPillar 5/12/2017 15:28",
+		"addCredentials:" : "RichardPillar 6/3/2018 13:05",
+		"shopDescription:" : "RichardPillar 11/17/2016 08:08",
+		"processShopDescriptionInput:" : "RichardPillar 11/17/2016 22:24",
+		"renderAddShopFormOn:" : "RichardPillar 1/31/2018 08:05",
+		"shopId" : "RichardPillar 11/17/2016 08:09",
+		"shopDescription" : "RichardPillar 11/17/2016 08:08",
+		"renderAddShopDescriptionOn:" : "RichardPillar 12/6/2016 08:16",
+		"shopName" : "RichardPillar 11/17/2016 08:09",
+		"addShop" : "RichardPillar 3/18/2017 22:24",
+		"channelNames" : "RichardPillar 12/21/2017 08:07",
+		"messageComponent" : "RichardPillar 11/17/2016 08:07",
+		"shopName:" : "RichardPillar 11/17/2016 08:09",
+		"messageComponent:" : "RichardPillar 11/17/2016 08:07",
+		"renderAddChannelSelectOn:" : "RichardPillar 11/25/2017 19:28",
+		"renderAddShopNameOn:" : "RichardPillar 3/24/2017 14:59",
+		"scriptAddShopButtons:" : "RichardPillar 6/3/2018 13:12",
+		"renderAddShopButtonsOn:" : "RichardPillar 6/3/2018 13:14",
+		"shopId:" : "RichardPillar 11/17/2016 08:09",
+		"renderContentOn:" : "RichardPillar 1/31/2018 08:06"
+	},
+	"class" : { }
+}

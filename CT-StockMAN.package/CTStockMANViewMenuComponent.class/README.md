@@ -1,0 +1,1 @@
+The 'menu' component. Displayed on the left of the 'screen' once the user has logged-in.

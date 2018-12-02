@@ -1,0 +1,30 @@
+{
+	"instance" : {
+		"channel" : "RichardPillar 12/13/2017 13:50",
+		"renderGetCategoriesContentOn:" : "RichardPillar 1/26/2018 08:11",
+		"shopCredentials:" : "RichardPillar 11/21/2017 08:06",
+		"initialize" : "RichardPillar 11/19/2017 21:40",
+		"channel:" : "RichardPillar 12/13/2017 13:50",
+		"getChannelCategories" : "RichardPillar 3/3/2018 09:07",
+		"renderGetCategoriesShopSelectOn:" : "RichardPillar 11/20/2017 21:58",
+		"parseGetEBayCategoriesResponse:" : "RichardPillar 3/2/2018 23:01",
+		"renderGetCategoriesMessageOn:" : "RichardPillar 11/19/2017 20:54",
+		"shopName" : "RichardPillar 11/14/2017 14:43",
+		"renderGetCategoryButtonsOn:" : "RichardPillar 1/25/2018 08:07",
+		"channelNames" : "RichardPillar 11/20/2017 22:39",
+		"renderGetCategoriesActionCloseOn:" : "RichardPillar 11/19/2017 21:20",
+		"parseShopName:" : "RichardPillar 11/20/2017 23:11",
+		"messageComponent" : "RichardPillar 11/13/2017 21:42",
+		"shopName:" : "RichardPillar 11/14/2017 14:43",
+		"messageComponent:" : "RichardPillar 11/13/2017 21:42",
+		"channelNames:" : "RichardPillar 11/20/2017 22:39",
+		"getShopCredentials:" : "RichardPillar 11/21/2017 22:40",
+		"getShopNames" : "RichardPillar 11/22/2017 22:54",
+		"checkShopCredentials:" : "RichardPillar 12/13/2017 13:51",
+		"shopCredentials" : "RichardPillar 11/21/2017 08:06",
+		"renderGetCategoryButtonGetCategoryOn:" : "RichardPillar 6/6/2018 07:58",
+		"renderGetCategoriesFormOn:" : "RichardPillar 1/26/2018 08:15",
+		"renderContentOn:" : "RichardPillar 1/26/2018 08:08"
+	},
+	"class" : { }
+}

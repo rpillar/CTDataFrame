@@ -1,0 +1,1 @@
+Different channels may define the categories (product classes) differently. In order to assist with analytics (for example) this component enables the user to allocate a custom name to a channel category thereby creating a name common to a group of products regardless of which channel is the seller.

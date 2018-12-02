@@ -1,0 +1,1 @@
+Form component - enable the adding of new shop details.

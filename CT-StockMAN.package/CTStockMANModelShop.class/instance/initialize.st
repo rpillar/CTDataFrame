@@ -1,0 +1,4 @@
+table
+initialize
+
+	super initialize.

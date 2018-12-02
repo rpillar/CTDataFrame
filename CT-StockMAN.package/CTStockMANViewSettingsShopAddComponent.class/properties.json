@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "RichardPillar 11/17/2016 08:04",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messageComponent",
+		"channel",
+		"shopId",
+		"shopName",
+		"shopDescription"
+	],
+	"name" : "CTStockMANViewSettingsShopAddComponent",
+	"type" : "normal"
+}

@@ -1,0 +1,4 @@
+acccessing
+dbTablePrimaryKey
+
+	^ #( 'channel' 'categoryName' ).

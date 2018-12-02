@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "FirstnameLastname 7/4/2016 16:08",
+	"super" : "CTStockMANModel",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"productId",
+		"category",
+		"date",
+		"time",
+		"quantity",
+		"customer",
+		"channelId",
+		"transactionType",
+		"amount"
+	],
+	"name" : "CTStockMANModelTransaction",
+	"type" : "normal"
+}

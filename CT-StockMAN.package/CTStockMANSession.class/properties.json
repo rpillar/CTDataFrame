@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "FirstnameLastname 7/4/2016 16:20",
+	"super" : "WASession",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"database",
+		"dbConn",
+		"dbResource",
+		"logDatabase",
+		"user"
+	],
+	"name" : "CTStockMANSession",
+	"type" : "normal"
+}

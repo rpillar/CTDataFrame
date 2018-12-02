@@ -1,0 +1,26 @@
+{
+	"instance" : {
+		"renderDashboardTrafficDataOn:" : "RichardPillar 4/4/2018 08:38",
+		"initialize" : "RichardPillar 11/5/2018 22:52",
+		"shopsActive" : "RichardPillar 1/9/2017 08:36",
+		"renderSampleDashboardSalesChartOn:" : "RichardPillar 12/21/2016 08:33",
+		"shops:" : "RichardPillar 1/9/2017 08:36",
+		"shopsActive:" : "RichardPillar 1/9/2017 08:36",
+		"renderSampleDashboardCategorySalesOn:" : "RichardPillar 6/6/2018 07:45",
+		"getCategoryData:" : "RichardPillar 1/3/2017 14:37",
+		"channels:" : "RichardPillar 1/9/2017 08:35",
+		"renderDashboardFeedbackChartOn:" : "RichardPillar 8/2/2018 12:52",
+		"renderDashboardSummaryOn:" : "RichardPillar 8/31/2018 11:51",
+		"renderSampleDashboardHeaderOn:" : "RichardPillar 12/21/2016 08:11",
+		"shops" : "RichardPillar 1/9/2017 08:36",
+		"renderDashboardSummaryChartOn:" : "RichardPillar 4/4/2018 08:39",
+		"channels" : "RichardPillar 1/9/2017 08:35",
+		"getCategories" : "RichardPillar 12/27/2016 21:50",
+		"renderSampleDashboardOn:" : "RichardPillar 1/3/2017 21:54",
+		"renderSampleDashboardSalesOn:" : "RichardPillar 12/22/2016 10:10",
+		"style" : "RichardPillar 1/3/2017 21:51",
+		"renderDashboardOn:" : "RichardPillar 4/4/2018 08:37",
+		"renderContentOn:" : "RichardPillar 2/17/2017 08:16"
+	},
+	"class" : { }
+}

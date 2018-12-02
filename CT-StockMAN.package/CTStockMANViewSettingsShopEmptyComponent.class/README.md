@@ -1,0 +1,1 @@
+A 'component' to represent the data at a point where there are 'no' shops.

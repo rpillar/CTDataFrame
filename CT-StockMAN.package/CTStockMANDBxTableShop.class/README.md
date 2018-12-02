@@ -1,0 +1,1 @@
+StockMAN Shops table - CTDBx definition.

@@ -1,0 +1,13 @@
+{
+	"instance" : {
+		"myShop:" : "FirstnameLastname 7/25/2016 16:51",
+		"initialize" : "FirstnameLastname 7/25/2016 16:50",
+		"getCollections" : "RichardPillar 10/27/2017 21:53",
+		"myShop" : "RichardPillar 11/6/2017 20:01",
+		"getProducts" : "FirstnameLastname 7/25/2016 17:09",
+		"getProduct:" : "FirstnameLastname 7/25/2016 17:09",
+		"getOrders" : "FirstnameLastname 10/5/2016 13:34",
+		"getOrder:" : "FirstnameLastname 10/5/2016 13:39"
+	},
+	"class" : { }
+}

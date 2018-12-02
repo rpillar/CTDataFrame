@@ -1,0 +1,1 @@
+Display 'shop' details and enable the editing / deleting of existing details.

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "RichardPillar 11/13/2018 08:37",
+	"super" : "CTDBx",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CTStockMANDBxTableChannelCategories",
+	"type" : "normal"
+}

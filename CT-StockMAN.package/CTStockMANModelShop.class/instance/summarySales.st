@@ -1,0 +1,3 @@
+relation
+summarySales
+	^ self relationSummarySales.

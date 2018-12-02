@@ -1,0 +1,4 @@
+accessing
+tablePrimaryKey
+
+	^ #(channel shopName).
