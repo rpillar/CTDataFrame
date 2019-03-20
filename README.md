@@ -1,6 +1,9 @@
 # CTDataFrame
 A 'dataframe'-like class built using Pharo (Smalltalk). Inspired by 'R'.
 
+# Note :- 
+This example uses CTDatabaseResource (deprecated) - updates are being made to ensure that it is possible to plug-in data retrieved using CTDBx. 
+
 ```
 | database dataframe dbResource modelData |
 "populate dataframe ..."
