@@ -1,33 +1,24 @@
-# CTDataFrame
-A 'dataframe'-like class built using Pharo (Smalltalk). Inspired by 'R'.
+Experiment - a 'dataframe' object (like in 'R') - structured as an OrderedCollection the elements of which are the observations - these could be loaded from a CSV file or from a database table. Each 'observation' is a dictionary - note that both CTDBx and CTCSV output 'dictionary data'.
 
-# Note :- 
-This example uses CTDatabaseResource (deprecated) - updates are being made to ensure that it is possible to plug-in data retrieved using CTDBx. 
+Operations to retrieve subsets of the collection based on the comparison method used. Methods - mean / sum / summarize are provided - more will be added. 
 
-```
-| database dataframe dbResource modelData |
-"populate dataframe ..."
+Example (taking data from a SQLite db) :-
+
+| db dataframe |
+db := CTDBxIncomeTable new.
 dataframe := CTDataFrame new.
-dbResource := CTDatabaseResource new.
-database := ( UDBCSQLite3Connection on: '<pathto>/income.db' ).
-database open.
-dbResource database: database.
-modelData := dbResource query: 'select Date, Takings, Donations, Total, Day, Week, Month, Year, CustNumbers from summary' on: 'CTTestModelIncome'.
-dataframe dataset: modelData.
+db database dbConnection: ( UDBCSQLite3Connection on: '/csv.db' ).
+db database dbConnection open.
+db dbSearchAll.
+dataframe dataset: db dbResultset.
+dataframe inspect.
 
-"First step - <select> the data that you want to work with - selectAll / selectEquals: ..."
-dataframe selectEquals: 'Year' with: 13.
+For _things_ to work it is necessary to 'select' data :- 
 
-"get a <mean>"
-dataframe selectAll; mean: 'Takings'.
+dataframe selectEquals: 'Year' with: 13. 
 
-"group data - by 'Month' for example and then calculate a <max> value for a particular field. This
-will return a <Dictionary> - the 'keys' will be the 'Month' values."
-dataframe groupBy: 'Month'; groupByMean: 'Takings'.
+Operations can only performed on data that has been selected. Internally the 'resultset' instance variable is populated with the 'selected' data - and all operations are performed against that resultset. On that basis we can do :-
 
-"summarize data - return <max> / <min> / <standard dev> / <mean> for each field."
-dataframe summarize.
-
-"summarize data by group"
-dataframe groupBy: 'Month'; groupSummarize.
+dataframe mean: 'Takings'.
+dataframe sum: 'Takings'.
 ```
