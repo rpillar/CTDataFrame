@@ -6,4 +6,4 @@ mean: aField
 	myField := aField asSymbol.
    myFieldsDict := self rotate: self resultset.
 
-	^ ( myFieldsDict at: myField ) average round: 2.
+	^ ( ( myFieldsDict at: myField ) average round: 2 ) asFloat.

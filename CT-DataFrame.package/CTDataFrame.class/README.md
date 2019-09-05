@@ -22,3 +22,7 @@ Operations can only performed on data that has been selected. Internally the 're
 dataframe mean: 'Takings'.
 dataframe sum: 'Takings'.
 
+It is also possible to _group_ data using the method groupBy: <field> - this will populate the <groupset> field with a collection of Dictionaries. :-
+
+dataframe groupBy: 'Month':
+

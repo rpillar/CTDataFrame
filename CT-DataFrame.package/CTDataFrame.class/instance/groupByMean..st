@@ -6,7 +6,7 @@ groupByMean: aField
 	
 	self groupset keysDo: [ :groupKey |
 		myFieldsDict := self rotate: ( self groupset at: groupKey ).
-		myResult at: groupKey put: ( ( myFieldsDict at: aField ) average round: 2 ).
+		( myResult at: groupKey put: ( ( myFieldsDict at: aField ) average round: 2 ) ) asFloat.
 	].
 
 	^ myResult.
