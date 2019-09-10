@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"success:" : "RichardPillar 7/4/2018 20:01",
+		"headers" : "RichardPillar 7/2/2018 23:09",
+		"toJsonString" : "RichardPillar 9/9/2019 22:33",
+		"loadFromCSVFile:" : "RichardPillar 9/7/2019 22:03",
+		"data" : "RichardPillar 7/2/2018 23:23",
+		"data:" : "RichardPillar 7/2/2018 23:09",
+		"parseCSVColumnString:" : "RichardPillar 9/7/2019 22:07",
+		"success" : "RichardPillar 7/4/2018 20:01",
+		"initialize" : "RichardPillar 7/2/2018 23:18",
+		"writeToCSVFile:" : "RichardPillar 7/26/2018 22:40",
+		"headers:" : "RichardPillar 7/2/2018 23:09"
+	},
+	"class" : { }
+}

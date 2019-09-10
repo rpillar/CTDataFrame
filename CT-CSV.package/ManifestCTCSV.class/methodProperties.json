@@ -1,0 +1,11 @@
+{
+	"instance" : { },
+	"class" : {
+		"ruleGRAnsiExceptionsRuleV1FalsePositive" : "RichardPillar 9/7/2019 22:02",
+		"ruleGRParensFormattingRuleV1FalsePositive" : "RichardPillar 9/5/2019 22:58",
+		"ruleRBTempsReadBeforeWrittenRuleV1FalsePositive" : "RichardPillar 9/7/2019 22:02",
+		"ruleRBJustSendsSuperRuleV1FalsePositive" : "RichardPillar 9/6/2019 22:04",
+		"ruleRBUtilityMethodsRuleV1FalsePositive" : "RichardPillar 9/7/2019 22:02",
+		"ruleRBCollectionProtocolRuleV1FalsePositive" : "RichardPillar 8/30/2019 22:05"
+	}
+}
