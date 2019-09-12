@@ -1,3 +1,0 @@
-relation
-shop
-	^ self relationShop.

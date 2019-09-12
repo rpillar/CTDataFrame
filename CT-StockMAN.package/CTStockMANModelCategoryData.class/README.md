@@ -1,1 +1,0 @@
-Summary data - by category - for the last 36 months. Used to display data / charts on the Dashboard page.

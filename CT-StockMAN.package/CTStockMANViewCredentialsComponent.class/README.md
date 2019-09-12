@@ -1,1 +1,0 @@
-Add / Edit a shops credentials - also 'test' and view response.

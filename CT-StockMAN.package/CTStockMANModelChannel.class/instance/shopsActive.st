@@ -1,3 +1,0 @@
-relation
-shopsActive
-	^ self relationShopsActive.

@@ -1,3 +1,0 @@
-accessing
-appUrl
-	^ appUrl

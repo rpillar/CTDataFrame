@@ -1,1 +1,0 @@
-Stockman settings page - add / amend channel and shop details.

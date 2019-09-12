@@ -1,1 +1,0 @@
-I represent a StockMAN product - anything that can be sold.

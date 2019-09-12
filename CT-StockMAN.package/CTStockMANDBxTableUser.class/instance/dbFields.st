@@ -1,4 +1,0 @@
-accessing
-dbFields
-
-	^ #( 'userName' 'password' ).

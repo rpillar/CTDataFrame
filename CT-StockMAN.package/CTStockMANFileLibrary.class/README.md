@@ -1,1 +1,0 @@
-StockMAN - file library -> a placeholder for now. May not be used.

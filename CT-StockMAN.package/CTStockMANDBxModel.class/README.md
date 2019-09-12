@@ -1,1 +1,0 @@
-Base class for StockMAN Model classes based on CTDBx.

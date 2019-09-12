@@ -1,4 +1,0 @@
-accessing
-tablePrimaryKey
-
-	^ #('channel' 'categoryName' ).

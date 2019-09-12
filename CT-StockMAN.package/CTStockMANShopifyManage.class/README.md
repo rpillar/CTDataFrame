@@ -1,1 +1,0 @@
-Shopify - methods to create / retrieve and generally manage products in my Shopify account.

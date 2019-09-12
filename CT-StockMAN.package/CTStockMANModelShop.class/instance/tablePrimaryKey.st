@@ -1,4 +1,0 @@
-table
-tablePrimaryKey
-
-	^ 'shopId'.

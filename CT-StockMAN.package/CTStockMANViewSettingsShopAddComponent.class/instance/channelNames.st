@@ -1,4 +1,0 @@
-accessing
-channelNames
-	
-	^ #( EBay ).

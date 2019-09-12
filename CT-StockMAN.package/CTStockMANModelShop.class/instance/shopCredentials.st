@@ -1,4 +1,0 @@
-relation
-shopCredentials
-
-	^ self relationShopCredentials.

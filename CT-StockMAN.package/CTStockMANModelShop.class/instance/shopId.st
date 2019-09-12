@@ -1,3 +1,0 @@
-accessing
-shopId
-	^ shopId

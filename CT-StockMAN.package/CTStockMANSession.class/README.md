@@ -1,1 +1,0 @@
-The application session object for StockMAN.
