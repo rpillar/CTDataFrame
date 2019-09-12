@@ -1,9 +1,11 @@
 select
 seriesDataWith: aField
 
-	"return a series based on the current _resultset_ of the specified _field_"
-	| series |
-	series := OrderedCollection new.
-	series := ( self resultset collect: [ :each | each at: aField ] ).
-
-	^ series.
+	"set series based on the current _resultset_ of the specified _field_"
+	| seriesData |
+	seriesData := OrderedCollection new.
+	seriesData := ( self resultset collect: [ :each | each at: aField ] ).
+	
+	self series: seriesData.
+	
+	^ self.

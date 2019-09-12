@@ -1,13 +1,14 @@
 select
 seriesGroupDataWith: aField
 
-	"return a series based on the current _groupset_ - of the specified _field_"
-	| data series |
+	"set series based on the current _groupset_ - of the specified _field_"
+	| data seriesData |
 	data := Dictionary new.
 	self groupset keysDo: [ :k | 
-		series := OrderedCollection new.
-		series := ( self groupset at: k ) collect: [ :each | each at: aField ].
-		data at: k put: series. 
+		seriesData := OrderedCollection new.
+		seriesData := ( self groupset at: k ) collect: [ :each | each at: aField ].
+		data at: k put: seriesData. 
 	].
+	self series: data.
 
-	^ data.
+	^ self.

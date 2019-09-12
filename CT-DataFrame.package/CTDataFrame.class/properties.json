@@ -9,6 +9,7 @@
 		"dataset",
 		"groupset",
 		"resultset",
+		"series",
 		"summary"
 	],
 	"name" : "CTDataFrame",
