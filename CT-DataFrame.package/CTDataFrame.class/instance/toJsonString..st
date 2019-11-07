@@ -1,4 +1,4 @@
-accessing
+printing
 toJsonString: aCollection
 
 	"returns the collection as a JSON string"

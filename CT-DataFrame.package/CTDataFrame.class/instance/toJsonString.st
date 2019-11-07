@@ -1,4 +1,4 @@
-accessing
+printing
 toJsonString
 
 	"returns the series as a JSON string"

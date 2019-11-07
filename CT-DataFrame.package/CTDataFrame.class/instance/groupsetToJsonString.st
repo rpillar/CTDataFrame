@@ -1,4 +1,4 @@
-accessing
+printing
 groupsetToJsonString
 
 	"returns the groupset as a JSON string"
