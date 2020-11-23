@@ -2,23 +2,26 @@ Experiment - a 'dataframe' object (like in 'R') - structured as an OrderedCollec
 
 Operations to retrieve subsets of the collection based on the comparison method used. Methods - mean / sum / summarize are provided - more will be added. 
 
-Example (taking data from a SQLite db) :-
+Example (taking data from a SQLite db) - the CTDataFrameIncome class defines the database table from which the data will be retrieved :-
 ```
-| db dataframe |
-db := CTDBxIncomeTable new.
-dataframe := CTDataFrame new.
-db database dbConnection: ( UDBCSQLite3Connection on: '/csv.db' ).
-db database dbConnection open.
-db dbSearchAll.
-dataframe dataset: db dbResultset.
-dataframe inspect.
+| df q r |
+df := CTDataFrame new.
+q := CTDBxQuery new.
+q queryTable: 'CTDataFrameIncome'; dbSearch: { { #year -> 13 } }.
+r := CTDataFrameIncome new.
+r conn: ( UDBCSQLite3Connection on: '/Users/richardpillar/temp/csv.db').
+r conn open.
+r resultset: ( r processSearchQuery: ( q queryString ) ).
+r conn close.
+df dataset: r resultset.
+df inspect.
 ```
 For _things_ to work it is necessary to 'select' data :- 
 ```
-dataframe selectEquals: 'Year' with: 13. 
+df selectEquals: 'Year' with: 13. 
 ```
 Operations can only performed on data that has been selected. Internally the 'resultset' instance variable is populated with the 'selected' data - and all operations are performed against that resultset. On that basis we can do :-
 ```
-dataframe mean: 'Takings'.
-dataframe sum: 'Takings'.
+df mean: 'Takings'.
+df sum: 'Takings'.
 ```
