@@ -1,7 +1,8 @@
 calculate
 groupBySummarize
 
-	"Min / Median / Mean / Max - of <number> fields in resultset - populate summary"
+	"Min / Median / Mean / Max - of <number> fields in the groupset - populate summary
+	Note - needs the groupBy method to be run so that <groupset> is populated. "
 	| myData myFieldsDict myResult mySummary myValues |
 	mySummary := Dictionary new.
 
