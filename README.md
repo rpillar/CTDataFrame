@@ -1,3 +1,4 @@
+# CTDataFrame #
 Experiment - a 'dataframe' object (like in 'R') - structured as an OrderedCollection the elements of which are the observations - these could be loaded from a CSV file or from a database table. Each 'observation' is a dictionary - note that both CTDBx and CTCSV output 'dictionary data'.
 
 Operations to retrieve subsets of the collection based on the comparison method used. Methods - `mean` / `sum` / `summarize` are provided - more will be added. 
