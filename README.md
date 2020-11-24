@@ -25,3 +25,15 @@ Operations can only performed on data that has been selected. Internally the 're
 df mean: 'Takings'.
 df sum: 'Takings'.
 ```
+
+To load a dataframe from a CSV file :-
+```
+| c df |
+c := CTCSV new.
+df := CTDataFrame new.
+c loadFromCSVFile: '/Users/richardpillar/temp/income.csv'.
+df dataset: c data.
+df selectEquals: 'Year' with: 13.
+df inspect. 
+```
+This does assume that the first row always contains the column headers - which become the keys in the Dataframe dictionary.
