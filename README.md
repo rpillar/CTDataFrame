@@ -51,3 +51,4 @@ Gofer it
    configurationOf: 'NeoCSV';
    loadStable.
 ```
+Load the `CTCSV` package from my Github repo using the Monticello Browser.
