@@ -21,7 +21,7 @@ For _things_ to work it is necessary to 'select' data :-
 ```
 df selectEquals: 'Year' with: 13. 
 ```
-Operations can only performed on data that has been selected. Internally the 'resultset' instance variable is populated with the 'selected' data - and all operations are performed against that resultset. On that basis we can do :-
+Operations can only performed on data that has been selected. Internally the `resultset` instance variable is populated with the 'selected' data - and all operations are performed against that `resultset`. On that basis we can do :-
 ```
 df mean: 'Takings'.
 df sum: 'Takings'.
