@@ -2,7 +2,7 @@ Experiment - a 'dataframe' object (like in 'R') - structured as an OrderedCollec
 
 Operations to retrieve subsets of the collection based on the comparison method used. Methods - `mean` / `sum` / `summarize` are provided - more will be added. 
 
-Example (taking data from a SQLite db) - the CTDataFrameIncome class defines the database table from which the data will be retrieved :-
+Example (taking data from a SQLite db) - the `CTDataFrameIncome` class defines the database table from which the data will be retrieved :-
 ```
 | df q r |
 df := CTDataFrame new.
