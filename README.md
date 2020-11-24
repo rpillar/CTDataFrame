@@ -38,7 +38,7 @@ df inspect.
 ```
 This does assume that the first row always contains the column headers - which become the keys in the Dataframe dictionary.
 
-##Dependencies##
+## Dependencies ##
 ```
 Metacello new
   repository: 'github://svenvc/NeoJSON/repository';
