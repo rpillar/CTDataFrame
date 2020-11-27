@@ -26,7 +26,10 @@ Operations can only performed on data that has been selected. Internally the `re
 df mean: 'Takings'.
 df sum: 'Takings'.
 ```
-
+The `summarize` method will provide a _summary_ of the _numeric_ fields that are part of the `resultset` :-
+```
+df summarize.
+```
 To load a dataframe from a CSV file :-
 ```
 | c df |
