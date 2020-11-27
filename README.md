@@ -39,7 +39,7 @@ df inspect.
 ```
 This does assume that the first row always contains the column headers - which become the keys in the Dataframe dictionary.
 
-It is possible to export the _contents_ of the dataframe `resultset` to JSON - 
+It is possible to export the _contents_ of the dataframe `resultset` to JSON :- 
 ```
 | c df j |
 c := CTCSV new.
