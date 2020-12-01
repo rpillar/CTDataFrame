@@ -53,7 +53,7 @@ df selectEquals: 'Year' with: 13.
 j := df resultsetToJsonString.
 j inspect.
 ```
-For graphs / visualisations it may be necessary to send _series_ data (based on a particular field) to the graphing software. For this purpose the method `seriesDataWith: aField` can combined with the `toJsonString` method :-
+For graphs / visualisations it may be necessary to send _series_ data (based on a particular field) to the graphing software. For this purpose the method `seriesDataWith: aField` can be used to populate the `series` collection that is then converted to a JSON string using the `toJsonString` method :-
 ```
 | c df j |
 c := CTCSV new.
