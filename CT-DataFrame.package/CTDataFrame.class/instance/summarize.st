@@ -2,7 +2,7 @@ calculate
 summarize
 
 	"Min / Median / Mean / Max - of <number> fields in resultset - populate summary"
-	| myData myResults mySummary  myValuesDict |
+	| myData myResults mySummary myValuesDict |
 	mySummary := Dictionary new.
 		
 	"rotate my resultset"
