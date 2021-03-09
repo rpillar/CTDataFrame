@@ -7,6 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"dataset",
+		"fields",
 		"groupset",
 		"resultset",
 		"series"
