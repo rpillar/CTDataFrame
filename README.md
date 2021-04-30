@@ -79,3 +79,4 @@ Gofer it
    loadStable.
 ```
 Load the `CTCSV` package from my Github repo using the Monticello Browser.
+Load the `CTDBx` package from my Github repo using the Monticello Browser.

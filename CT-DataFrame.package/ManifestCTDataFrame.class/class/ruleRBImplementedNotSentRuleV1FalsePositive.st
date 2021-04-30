@@ -1,3 +1,3 @@
 code-critics
 ruleRBImplementedNotSentRuleV1FalsePositive
-	^ #(#(#(#RGMethodDefinition #(#CTDataFrame #summarize #false)) #'2021-02-27T21:22:06.166862+00:00') )
+	^ #(#(#(#RGMethodDefinition #(#CTDataFrame #summarize #false)) #'2021-02-27T21:22:06.166862+00:00') #(#(#RGMethodDefinition #(#CTDataFrame #selectAllWithSubset: #false)) #'2021-03-15T20:48:35.183266+00:00') #(#(#RGMethodDefinition #(#CTDataFrame #standardDev: #false)) #'2021-03-15T20:59:20.551266+00:00') #(#(#RGMethodDefinition #(#CTDataFrame #quantile: #false)) #'2021-03-27T17:29:49.891266+00:00') )

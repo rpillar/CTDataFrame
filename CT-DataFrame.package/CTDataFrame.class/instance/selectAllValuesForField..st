@@ -1,5 +1,5 @@
 select
-selectAllValuesFor: aField
+selectAllValuesForField: aField
 	
 	| myField |
 
