@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "RichardPillar 9/1/2019 22:26",
+	"commentStamp" : "RichardPillar 8/1/2021 18:24",
 	"super" : "Object",
 	"category" : "CT-DataFrame",
 	"classinstvars" : [ ],
@@ -9,6 +9,7 @@
 		"dataset",
 		"fields",
 		"groupset",
+		"metaData",
 		"resultset",
 		"series"
 	],

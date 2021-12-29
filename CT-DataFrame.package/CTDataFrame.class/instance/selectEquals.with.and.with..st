@@ -3,7 +3,7 @@ selectEquals: aField with: anArg and: anotherField with: anotherArg
 	
 	| data firstField secondField |
 
-	self resultset: OrderedCollection new.
+	self resultset: CTCollection new.
 	firstField := aField asSymbol.
 	secondField := anotherField asSymbol.
 		

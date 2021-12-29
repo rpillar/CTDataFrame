@@ -2,7 +2,7 @@ select
 selectGreaterThan: aField with: anArg
 	
 	| myField |
-	self resultset: OrderedCollection new.
+	self resultset: CTCollection new.
 	myField := aField asSymbol.
 	
 	self resultset: ( self dataset select: [ :each |  

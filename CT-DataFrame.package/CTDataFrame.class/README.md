@@ -26,3 +26,10 @@ It is also possible to _group_ data using the method groupBy: <field> - this wil
 
 dataframe groupBy: 'Month':
 
+Dependencies
+============
+
+NeoCSV
+NeoJSON
+CTCollection
+

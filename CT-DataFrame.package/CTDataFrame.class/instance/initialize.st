@@ -2,4 +2,5 @@ initialization
 initialize
 
 	super initialize.
-	self resultset: OrderedCollection new.
+	self resultset: CTCollection new.
+	self metaData: CTDictionary new.

@@ -1,3 +1,3 @@
 accessing
 dataset
-	^ dataset ifNil: [ dataset := OrderedCollection new ].
+	^ dataset ifNil: [ dataset := CTCollection new ].

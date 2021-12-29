@@ -12,7 +12,7 @@ groupBySummarize
 		myFieldsDict keysDo: [ :key |
 			myValues := Dictionary new.
 			myData := myFieldsDict at: key.
-			myValues at: 'max' put: myData max; at: 'min' put: myData min; at: 'mean' put: ( ( myData average ) round: 2 ) asFloat; at: 'median' put: myData median.
+			myValues at: 'max' put: ( ( myData max ) round: 2 ); at: 'min' put: ( (myData min ) round: 2 ); at: 'mean' put: ( ( myData average ) round: 2 ) asFloat; at: 'median' put: ( ( myData median ) round: 2 ).
 			myResult at: key put: myValues.
 		].
 		mySummary at: groupKey put: myResult.

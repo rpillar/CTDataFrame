@@ -5,7 +5,7 @@ seriesGroupDataWith: aField
 	| data seriesData |
 	data := Dictionary new.
 	self groupset keysDo: [ :k | 
-		seriesData := OrderedCollection new.
+		seriesData := CTCollection new.
 		seriesData := ( self groupset at: k ) collect: [ :each | each at: aField ].
 		data at: k put: seriesData. 
 	].
