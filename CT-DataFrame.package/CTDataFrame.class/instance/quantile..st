@@ -9,12 +9,12 @@ quantile: anArray
 	
 	( sortedArray size odd ) 
 		ifTrue: [  
-			q1 := ( sortedArray copyFrom: 1 to: ( ( sortedArray size / 2 ) roundDownTo: 1 ) ) median.		
-			q3 := ( sortedArray copyFrom: ( ( sortedArray size / 2 ) roundUpTo: 2 ) to: ( sortedArray size ) ) median.	
+			q1 := ( sortedArray copyFrom: 1 to: ( ( sortedArray size / 2 ) roundDownTo: 1 ) ) median asFloat.		
+			q3 := ( sortedArray copyFrom: ( ( sortedArray size / 2 ) roundUpTo: 2 ) to: ( sortedArray size ) ) median asFloat.	
 		]
 		ifFalse: [  
-			q1 := ( sortedArray copyFrom: 1 to: ( sortedArray size / 2 ) ) median.
-			q3 := ( sortedArray copyFrom: ( ( sortedArray size / 2 ) + 1 ) to: ( sortedArray size ) ) median.
+			q1 := ( sortedArray copyFrom: 1 to: ( sortedArray size / 2 ) ) median asFloat.
+			q3 := ( sortedArray copyFrom: ( ( sortedArray size / 2 ) + 1 ) to: ( sortedArray size ) ) median asFloat.
 		].
 	
 	"reformat quamtile values if necessary - for floats only pass back with 2 decimal places"	

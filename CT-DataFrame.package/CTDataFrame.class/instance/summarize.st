@@ -17,7 +17,11 @@ summarize
 			at: 'mean' put: ( ( myData average ) round: 2 ) asFloat; 
 			at: 'median' put: ( ( myData median ) round: 2 ) asFloat; 
 			at: 'variance' put: ( myData variance ) asInteger; 
-			at: 'type' put: ( self metaData at: ( groupKey asSymbol ) ).
+			at: 'sd' put: ( myData standardDeviation ) asInteger;
+			at: 'type' put: ( self metaData at: ( groupKey asSymbol ) );
+			at: 'q1' put: ( ( myData quantile ) at: 1 );
+			at: 'q2' put: ( ( myData quantile ) at: 2 );
+			at: 'q3' put: ( ( myData quantile ) at: 3 ).
 			"at: 'obs' put: myData asSet size."
 		mySummary at: groupKey put: myResults.
 	].
