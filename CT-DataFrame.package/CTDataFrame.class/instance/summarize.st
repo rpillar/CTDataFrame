@@ -32,7 +32,7 @@ summarize
 				at: 'median' put: 'NA'; 
 				at: 'variance' put: 'NA'; 
 				at: 'sd' put: 'NA';
-				at: 'type' put: 'NA';
+				at: 'type' put: 'String';
 				at: 'q1' put: 'NA';
 				at: 'q2' put: 'NA';
 				at: 'q3' put: 'NA'.
