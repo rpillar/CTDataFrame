@@ -17,7 +17,7 @@ quantile: anArray
 			q3 := ( sortedArray copyFrom: ( ( sortedArray size / 2 ) + 1 ) to: ( sortedArray size ) ) median asFloat.
 		].
 	
-	"reformat quamtile values if necessary - for floats only pass back with 2 decimal places"	
+	"reformat quantile values if necessary - for floats only pass back with 2 decimal places"	
 	q1 isFloat ifTrue: [ q1 := ( q1 round: 2 ) ].
 	q2 isFloat ifTrue: [ q2 := ( q2 round: 2 ) ].
 	q3 isFloat ifTrue: [ q3 := ( q3 round: 2 ) ].

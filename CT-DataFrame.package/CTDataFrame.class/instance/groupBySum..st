@@ -1,4 +1,4 @@
-calculate
+grouping
 groupBySum: aField
 
 	| myFieldsDict myResult |

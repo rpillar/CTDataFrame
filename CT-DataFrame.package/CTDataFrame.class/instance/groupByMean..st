@@ -1,4 +1,4 @@
-calculate
+grouping
 groupByMean: aField
 
 	| myFieldsDict myResult |

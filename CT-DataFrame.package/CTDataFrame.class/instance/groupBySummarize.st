@@ -1,4 +1,4 @@
-calculate
+grouping
 groupBySummarize
 
 	"Min / Median / Mean / Max - of <number> fields in the groupset - populate summary

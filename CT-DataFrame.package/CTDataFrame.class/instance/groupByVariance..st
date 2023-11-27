@@ -1,4 +1,4 @@
-calculate
+grouping
 groupByVariance: aField
 
 	| myFieldsDict myResult |

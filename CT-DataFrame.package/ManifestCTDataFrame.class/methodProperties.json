@@ -13,6 +13,7 @@
 		"ruleRBCollectionProtocolRuleV1FalsePositive" : "RichardPillar 3/19/2021 20:44",
 		"ruleGRTempsFormattingRuleV1FalsePositive" : "RichardPillar 9/3/2019 21:53",
 		"ruleGRIvarNeitherReadNorWrittenRuleV1FalsePositive" : "RichardPillar 9/18/2019 22:53",
+		"ruleModifiesCollectionRuleV1FalsePositive" : "RichardPillar 8/30/2023 20:40",
 		"ruleRBUtilityMethodsRuleV1FalsePositive" : "RichardPillar 7/27/2021 18:49"
 	}
 }
