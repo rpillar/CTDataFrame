@@ -47,8 +47,9 @@ Class {
 		'resultset',
 		'series'
 	],
-	#category : 'CT-DataFrame',
-	#package : 'CT-DataFrame'
+	#category : 'CT-DataFrame-Base',
+	#package : 'CT-DataFrame',
+	#tag : 'Base'
 }
 
 { #category : 'transform' }
@@ -193,7 +194,6 @@ CTDataFrame >> loadData: aCollection [
 			].
 		( pair value isString ) ifTrue: 
 			[ 
-				"( [ pair value asDate ] on: Error do: [ ^false ] ) ifFalse: [ self metaData at: pair key asSymbol put: 'String' ]"
 				self metaData at: pair key asSymbol put: 'String'.
 				
 				"test for a Date - I'm sure this could be done in a better way - but for now ..."
