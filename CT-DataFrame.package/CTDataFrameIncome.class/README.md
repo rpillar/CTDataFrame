@@ -1,1 +1,0 @@
-Test class for CTDataFrame - instance variable are 'capitalized' to match the db field names.
