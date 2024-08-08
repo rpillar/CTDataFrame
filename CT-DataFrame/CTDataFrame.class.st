@@ -164,7 +164,7 @@ CTDataFrame >> groupset: anObject [
 	groupset := anObject
 ]
 
-{ #category : 'printing' }
+{ #category : 'grouping' }
 CTDataFrame >> groupsetToJsonString [
 
 	"returns the groupset as a JSON string"
