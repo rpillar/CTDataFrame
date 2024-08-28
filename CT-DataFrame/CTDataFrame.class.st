@@ -93,12 +93,13 @@ CTDataFrame >> groupBy: aField [
 { #category : 'grouping' }
 CTDataFrame >> groupByMean: aField [
 
+	"return a dictionary with the 'mean' of the specified field - for the current groupset (created using a 'previous' groupBy:"
 	| myFieldsDict myResult |
-	myResult := Dictionary new.
+	myResult := CTDictionary new.
 	
 	self groupset keysDo: [ :groupKey |
 		myFieldsDict := self rotate: ( self groupset at: groupKey ).
-		( myResult at: groupKey put: ( ( myFieldsDict at: aField ) average round: 2 ) ) asFloat.
+		( myResult at: groupKey put: ( ( myFieldsDict at: aField ) average asFloat round: 2 ) ).
 	].
 
 	^ myResult.
@@ -107,8 +108,9 @@ CTDataFrame >> groupByMean: aField [
 { #category : 'grouping' }
 CTDataFrame >> groupBySum: aField [
 
+	"return a dictionary with the 'sum' of the specified field - for the current groupset (created using a 'previous' groupBy:"
 	| myFieldsDict myResult |
-	myResult := Dictionary new.
+	myResult := CTDictionary new.
 	
 	self groupset keysDo: [ :groupKey |
 		myFieldsDict := self rotate: ( self groupset at: groupKey ).
@@ -122,18 +124,22 @@ CTDataFrame >> groupBySum: aField [
 CTDataFrame >> groupBySummarize [
 
 	"Min / Median / Mean / Max - of <number> fields in the groupset - populate summary
-	Note - needs the groupBy method to be run so that <groupset> is populated. "
+	Note - needs the groupBy method to be run so that <groupset> is populated.
+	Note - summary data id ONLY returned for <Number> fields"
+	
 	| myData myFieldsDict myResult mySummary myValues |
-	mySummary := Dictionary new.
+	mySummary := CTDictionary new.
 
 	self groupset keysDo: [ :groupKey |
 		myFieldsDict := self rotate: ( self groupset at: groupKey ).
-		myResult := Dictionary new.
+		myResult := CTDictionary new.
 		myFieldsDict keysDo: [ :key |
-			myValues := Dictionary new.
-			myData := myFieldsDict at: key.
-			myValues at: 'max' put: ( ( myData max ) round: 2 ); at: 'min' put: ( (myData min ) round: 2 ); at: 'mean' put: ( ( myData average ) round: 2 ) asFloat; at: 'median' put: ( ( myData median ) round: 2 ).
-			myResult at: key put: myValues.
+			( ( self metaData at: key ) = 'Number' ) ifTrue: [
+				myValues := CTDictionary new.
+				myData := myFieldsDict at: key.
+				myValues at: 'max' put: ( ( myData max ) round: 2 ); at: 'min' put: ( (myData min ) round: 2 ); at: 'mean' put: ( ( myData average ) round: 2 ) asFloat; at: 'median' put: ( ( myData median ) round: 2 ).
+				myResult at: key put: myValues.
+			].
 		].
 		mySummary at: groupKey put: myResult.
 	].
