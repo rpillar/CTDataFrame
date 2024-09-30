@@ -15,6 +15,13 @@ ManifestCTDataFrame class >> ruleBadMessageRule2V1FalsePositive [
 ]
 
 { #category : 'code-critics' }
+ManifestCTDataFrame class >> ruleCollectionProtocolRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#CTDataFrame #selectAllWithSubset: #false)) #'2024-09-30T22:21:22.794271+01:00') )
+]
+
+{ #category : 'code-critics' }
 ManifestCTDataFrame class >> ruleGRInstanceVariableCapitalizationRuleV1FalsePositive [
 	^ #(#(#(#RGClassDefinition #(#CTDataFrameIncome)) #'2019-09-21T22:25:12.0016+01:00') )
 ]
@@ -72,6 +79,13 @@ ManifestCTDataFrame class >> ruleRBModifiesCollectionRuleV1FalsePositive [
 { #category : 'code-critics' }
 ManifestCTDataFrame class >> ruleRBUtilityMethodsRuleV1FalsePositive [
 	^ #(#(#(#RGMethodDefinition #(#CTDataFrame #rotate: #false)) #'2018-07-23T20:48:27.051514+01:00') #(#(#RGMethodDefinition #(#CTDataFrame #quantile: #false)) #'2021-03-27T17:29:43.106266+00:00') #(#(#RGMethodDefinition #(#CTDataFrame #variance: #false)) #'2021-07-27T18:49:49.203059+01:00') )
+]
+
+{ #category : 'code-critics' }
+ManifestCTDataFrame class >> ruleReTestClassNotInPackageWithTestEndingNameRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGClassDefinition #(#CTDataFrameTest)) #'2024-09-17T21:58:02.361141+01:00') )
 ]
 
 { #category : 'code-critics' }

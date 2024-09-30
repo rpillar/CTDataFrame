@@ -5,6 +5,7 @@ Operations to retrieve subsets of the collection based on the comparison method 
 
 Example (taking data from a SQLite db) :-
 
+```
 | db dataframe |
 db := CTDBxIncomeTable new.
 dataframe := CTDataFrame new.
@@ -13,20 +14,20 @@ db database dbConnection open.
 db dbSearchAll.
 dataframe dataset: db dbResultset.
 dataframe inspect.
-
+```
 For _things_ to work it is necessary to 'select' data :- 
-
+```
 dataframe selectEquals: 'Year' with: 13. 
-
-Operations can only performed on data that has been selected. Internally the 'resultset' instance variable is populated with the 'selected' data - and all operations are performed against that resultset. On that basis we can do :-
-
+```
+Operations can only performed on data that has been selected. Internally the <resultset> instance variable is populated with the 'selected' data - and all operations are performed against that <resultset>. On that basis we can do :-
+```
 dataframe mean: 'Takings'.
 dataframe sum: 'Takings'.
-
-It is also possible to _group_ data using the method groupBy: <field> - this will populate the <groupset> field with a collection of Dictionaries. :-
-
+```
+It is also possible to _group_ data using the method groupBy: <field> - this will populate the <groupset> instance variable with a collection of Dictionaries. :-
+```
 dataframe groupBy: 'Month':
-
+```
 Dependencies
 ============
 
@@ -93,7 +94,7 @@ CTDataFrame >> groupBy: aField [
 { #category : 'grouping' }
 CTDataFrame >> groupByMean: aField [
 
-	"return a dictionary with the 'mean' of the specified field - for the current groupset (created using a 'previous' groupBy:"
+	"return a dictionary with the 'mean' of the specified field - for the current groupset (created using a 'previous' groupBy:)"
 	| myFieldsDict myResult |
 	myResult := CTDictionary new.
 	
@@ -150,8 +151,9 @@ CTDataFrame >> groupBySummarize [
 { #category : 'grouping' }
 CTDataFrame >> groupByVariance: aField [
 
+	"returns the variance of the specified <field> based on the current 'groupset'"
 	| myFieldsDict myResult |
-	myResult := Dictionary new.
+	myResult := CTDictionary new.
 	
 	self groupset keysDo: [ :groupKey |
 		myFieldsDict := self rotate: ( self groupset at: groupKey ).
@@ -342,14 +344,11 @@ CTDataFrame >> selectAll [
 { #category : 'select' }
 CTDataFrame >> selectAllValuesForField: aField [
 	
+	"return 'all' possible values for the specified field - as an array"
 	| myField |
-
-	self resultset: CTCollection new.
-	myField := aField asSymbol.
-
-	self resultset: ( self dataset collect: [ :each | each at: myField ] ).
 	
-	^ self.
+	myField := aField asSymbol.
+	^ ( self dataset collect: [ :each | each at: myField ] ) asArray.
 ]
 
 { #category : 'select' }
@@ -360,7 +359,7 @@ CTDataFrame >> selectAllWithSubset: aFieldsArray [
 	| myData myField |
 	
 	self dataset do: [ :data |
-		myData := Dictionary new.
+		myData := CTDictionary new.
 		aFieldsArray do: [ :aField | 
 			myField := aField asSymbol.
 			myData at: myField put: ( data at: myField ).
@@ -622,7 +621,8 @@ CTDataFrame >> transformColumnData: aColumn with: aRegex replacingMatchesWith: a
 { #category : 'calculate' }
 CTDataFrame >> variance: aField [
 
-	"for the provided field calculate the population variance"
+	"for the provided field calculate the population variance - based on the current 'resultset'. Note that this 
+	method uses the 'variance' method from the CTCollection class."
 	
 	| myField myFieldsDict |
 	myField := aField asSymbol.
