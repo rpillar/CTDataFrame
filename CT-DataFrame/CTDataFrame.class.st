@@ -373,6 +373,7 @@ CTDataFrame >> selectAllWithSubset: aFieldsArray [
 { #category : 'select' }
 CTDataFrame >> selectEquals: aField with: anArg [
 	
+	"populate the 'resultset' with all dataset rows where 'aField' is equal to 'anArg'"
 	| myField |
 
 	self resultset: CTCollection new.
@@ -388,6 +389,7 @@ CTDataFrame >> selectEquals: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectEquals: aField with: anArg and: anotherField with: anotherArg [
 	
+	"populate the 'resultset' with all dataset rows where 'aField' is equal to 'anArg' AND 'anotherField' is equal to 'anotherArg'"
 	| data firstField secondField |
 
 	self resultset: CTCollection new.
@@ -408,6 +410,7 @@ CTDataFrame >> selectEquals: aField with: anArg and: anotherField with: anotherA
 { #category : 'select' }
 CTDataFrame >> selectGreaterThan: aField with: anArg [
 	
+	"select the set of 'rows' where the value in 'aField' is greater than the value specified in 'anArg'"
 	| myField |
 	self resultset: CTCollection new.
 	myField := aField asSymbol.
@@ -420,6 +423,7 @@ CTDataFrame >> selectGreaterThan: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectGreaterThanOrEqual: aField with: anArg [
 	
+	"select the set of 'rows' where the value in 'aField' is greater than or equal to the value specified in 'anArg'"
 	| myField |
 	self resultset: CTCollection new.
 	myField := aField asSymbol.
@@ -432,6 +436,7 @@ CTDataFrame >> selectGreaterThanOrEqual: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectLessThan: aField with: anArg [
 	
+	"select the set of 'rows' where the value in 'aField' is less than the value specified in 'anArg'"
 	| myField |
 	self resultset: CTCollection new.
 	myField := aField asSymbol.
@@ -444,6 +449,7 @@ CTDataFrame >> selectLessThan: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectLessThanOrEqual: aField with: anArg [
 	
+	"select the set of 'rows' where the value in 'aField' is less than or equal to the value specified in 'anArg'"
 	| myField |
 	self resultset: CTCollection new.
 	myField := aField asSymbol.
@@ -456,6 +462,7 @@ CTDataFrame >> selectLessThanOrEqual: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectUniqueValuesFor: aField [
 	
+	"return the set of unique values for the specified 'field' - as an array."
 	| myData myField mySet |
 
 	myField := aField asSymbol.

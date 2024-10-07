@@ -168,6 +168,27 @@ CTDataFrameTest >> testQuantile [
 ]
 
 { #category : 'tests' }
+CTDataFrameTest >> testResultsetToJsonString [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'name' with: 'Richard'.
+	self assert: ( df resultset size ) equals: 1.
+	self assert:  ( ( df resultset ) first ) equals: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1961-10-11' . #gender -> 'Male' . #name -> 'Richard' } ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectAll [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectAll.
+	self assert:  ( ( df resultset ) first ) equals: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1961-10-11' . #gender -> 'Male' . #name -> 'Richard' } ).
+]
+
+{ #category : 'tests' }
 CTDataFrameTest >> testSelectAllValuesForField [
 
 	| df |
@@ -185,4 +206,78 @@ CTDataFrameTest >> testSelectAllWithSubset [
 	df loadData: baseCollection.
 	df selectAllWithSubset: #( 'age' 'name' ).
 	self assert:  ( ( df resultset ) first ) equals: ( CTDictionary newFrom: { #age -> 21 . #name -> 'Richard' } ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectEqualsWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'name' with: 'Richard'.
+	self assert: ( df resultset size ) equals: 1.
+	self assert:  ( ( df resultset ) first ) equals: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1961-10-11' . #gender -> 'Male' . #name -> 'Richard' } ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectEqualsWithAndWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals:  'gender' with: 'Female' and: 'age' with: 21.
+	self assert:  ( df resultset ) equals: ( OrderedCollection 
+		with: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1988-02-28' . #gender -> 'Female' . #name -> 'Marie' } ) 
+		with: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1982-09-20' . #gender -> 'Female' . #name -> 'Clare' } ) 
+		with: ( CTDictionary newFrom: { #age -> 21 . #dob -> '1988-05-29' . #gender -> 'Female' . #name -> 'Doris' } )  ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectGreaterThanOrEqualWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectGreaterThanOrEqual: 'age' with: 29.
+	self assert:  ( df resultset ) equals: ( OrderedCollection with: ( CTDictionary newFrom: { #age -> 29 . #dob -> '1988-01-29' . #gender -> 'Female' . #name -> 'Lucy' } ) ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectGreaterThanWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectGreaterThan: 'age' with: 28.
+	self assert:  ( df resultset ) equals: ( OrderedCollection with: ( CTDictionary newFrom: { #age -> 29 . #dob -> '1988-01-29' . #gender -> 'Female' . #name -> 'Lucy' } ) ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectLessThanOrEqualWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectLessThanOrEqual: 'age' with: 19.
+	self assert:  ( df resultset ) equals: ( OrderedCollection with: ( CTDictionary newFrom: { #age -> 19 . #dob -> '1987-04-10' . #gender -> 'Male' . #name -> 'Jo' } ) with: ( CTDictionary newFrom: { #age -> 19 . #dob -> '1987-04-20' . #gender -> 'Male' . #name -> 'Mark' } ) ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectLessThanWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectLessThan: 'age' with: 20.
+	self assert:  ( df resultset ) equals: ( OrderedCollection with: ( CTDictionary newFrom: { #age -> 19 . #dob -> '1987-04-10' . #gender -> 'Male' . #name -> 'Jo' } ) with: ( CTDictionary newFrom: { #age -> 19 . #dob -> '1987-04-20' . #gender -> 'Male' . #name -> 'Mark' } ) ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSelectUniqueValuesFor [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectUniqueValuesFor:  'gender'.
+	self assert:  ( df resultset ) equals: ( OrderedCollection with: 'Female' with: 'Male' ).
 ]
