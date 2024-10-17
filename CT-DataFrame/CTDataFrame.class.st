@@ -56,7 +56,8 @@ Class {
 { #category : 'transform' }
 CTDataFrame >> addColumn: aField with: aBlock [
 
-	"add a column to our dataframe based on evaluating the contents of the block passed in"
+	"add a column to our dataframe based on evaluating the contents of the block passed in. So for example you could add a field with a default :-
+	<addColumn: 'count' with [ 1 ]>"
 	self dataset do: [ :each |
 		each at: ( aField asSymbol ) put: aBlock value.
 	].
@@ -315,9 +316,9 @@ CTDataFrame >> resultsetToJsonString [
 { #category : 'action' }
 CTDataFrame >> rotate: aCollection [
 
+	"rotate objects so that <field> values are in their own collections - specifically used for numeric operations on the contents of the 'values' array. The input <aCollection> in this context is a dataframe 'row' (an OrderedCollection with one element - a CTDictionary object). All 'string' values will be replaced with '0'. NOTE :- YOU SHOULD NEVER NEED TO CALL THIS METHOD"
 	| myFieldValue myFieldValues myValuesDict |
 
-	"rotate objects so that <field> values are in their own collections - specifically used for numeric operations on the contents of the 'values' array"
 	myValuesDict := Dictionary new.
 	
 	(aCollection at: 1) keysDo: [ :field |  
@@ -485,7 +486,7 @@ CTDataFrame >> series: anObject [
 { #category : 'select' }
 CTDataFrame >> seriesDataWith: aField [
 
-	"set series based on the current _resultset_ of the specified _field_"
+	"set series based on the current 'resultset' for the specified 'field'"
 	| seriesData |
 	seriesData := CTCollection new.
 	seriesData := ( self resultset collect: [ :each | each at: aField ] ).

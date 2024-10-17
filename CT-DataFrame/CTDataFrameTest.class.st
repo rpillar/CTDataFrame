@@ -168,6 +168,17 @@ CTDataFrameTest >> testQuantile [
 ]
 
 { #category : 'tests' }
+CTDataFrameTest >> testRemoveColumn [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	self assert: ( ( df dataset first keys ) ) equals: #( #age #dob #gender #name ).
+	df removeColumn: 'age'.
+	self assert: ( ( df dataset first keys ) ) equals: #( #dob #gender #name ).
+]
+
+{ #category : 'tests' }
 CTDataFrameTest >> testResultsetToJsonString [
 
 	| df |
