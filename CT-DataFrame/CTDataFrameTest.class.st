@@ -292,3 +292,75 @@ CTDataFrameTest >> testSelectUniqueValuesFor [
 	df selectUniqueValuesFor:  'gender'.
 	self assert:  ( df resultset ) equals: ( OrderedCollection with: 'Female' with: 'Male' ).
 ]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSeriesDataWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'gender' with: 'Female'.
+	df seriesDataWith: 'age'.
+	self assert:  ( df series ) equals: #( 20 21 24 25 21 22 29 28 27 21) asOrderedCollection.
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSeriesGroupDataWith [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectAll.
+	df groupBy: 'gender'.
+	df seriesGroupDataWith: 'age'.
+	self assert:  ( df series at: 'Male' ) equals: #( 21 19 19 23 22 27 22 23 22 25 ) asOrderedCollection.
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSum [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'gender' with: 'Male'.
+	self assert:  ( df sum: 'age' ) equals: 223.
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testSummarize [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'gender' with: 'Male'.
+	self assert:  ( df summarize at: 'age') equals: ( CTDictionary newFrom: { 'max' -> 27 . 'mean' -> 22.3 . 'median' -> 22.0 . 'min' -> 19 . 'q1' -> 21.0 . 'q2' -> 22 . 'q3' -> 23.0 . 'sd' -> 2 . 'variance' -> 5 . 'type' -> 'Number' } ).
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testToJsonString [
+
+	| df |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	df selectEquals: 'gender' with: 'Female'.
+	df seriesDataWith: 'age'.
+	self assert:  ( df toJsonString ) equals: '[20,21,24,25,21,22,29,28,27,21]'.
+	self assert:  ( df toJsonString: #(1 2 3 4 5) ) equals: '[1,2,3,4,5]'.	
+
+]
+
+{ #category : 'tests' }
+CTDataFrameTest >> testTransformColumnDataWithReplacingMatchesWith [
+
+	| df re |
+	df := CTDataFrame new.
+	df loadData: baseCollection.
+	
+	self assert:  ( ( df selectUniqueValuesFor: 'name' ) first ) equals: 'Dave'.
+	
+	re := '[a-e]' asRegex. 
+	df transformColumnData: 'name' with: re replacingMatchesWith: 'xxx'.
+	df selectUniqueValuesFor: 'name'.
+	self assert:  ( ( df selectUniqueValuesFor: 'name' ) first ) equals: 'Lxxxurxxx'.
+
+]

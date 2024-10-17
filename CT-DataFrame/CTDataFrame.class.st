@@ -463,14 +463,14 @@ CTDataFrame >> selectLessThanOrEqual: aField with: anArg [
 { #category : 'select' }
 CTDataFrame >> selectUniqueValuesFor: aField [
 	
-	"return the set of unique values for the specified 'field' - as an array."
+	"return the set of unique values for the specified 'field' - as an array. Note that this method takes data from the 'dataset' instance variable and returns a set of unique values as an OrderedCollection."
 	| myData myField mySet |
 
 	myField := aField asSymbol.
 	myData := ( self dataset collect: [ :each | each at: myField ] ).
 	mySet := Set withAll: myData.
 
-	^ self resultset: mySet asOrderedCollection.
+	^ mySet asOrderedCollection.
 ]
 
 { #category : 'accessing' }
@@ -499,8 +499,9 @@ CTDataFrame >> seriesDataWith: aField [
 { #category : 'select' }
 CTDataFrame >> seriesGroupDataWith: aField [
 
-	"set series based on the current _groupset_ - of the specified _field_"
+	"set series based on the current 'groupset' - for the specified 'field'. In this case 'series' will be a dictionary with a 'key' and its 'value' being the actual 'series' data (as an OrderedCollection)."
 	| data seriesData |
+	
 	data := Dictionary new.
 	self groupset keysDo: [ :k | 
 		seriesData := CTCollection new.
@@ -515,7 +516,8 @@ CTDataFrame >> seriesGroupDataWith: aField [
 { #category : 'calculate' }
 CTDataFrame >> standardDev: aField [
 
-	"compute the standard deviation for the specified field 
+	"DON'T USE THIS METHOD - being deprecated.
+	Compute the standard deviation for the specified field 
 	 - the stdev message in <Collection> is a <sample> standard dev - we want to
 	 cover the whole <population>."
 	| myCount myDeviations myField myValue myValues myVariance |
@@ -556,9 +558,9 @@ CTDataFrame >> sum: aField [
 { #category : 'calculate' }
 CTDataFrame >> summarize [
 
-	"Min / Median / Mean / Max - of <number> fields in resultset - populate summary"
+	"Min / Median / Mean / Max - of <number> fields in resultset. Returns a dictionary - keys are the 'resultset keys' / 'values' are the calculated min / max ..... and so on. Only fields with numeric values are considered."
 	| myData myResults mySummary myValuesDict |
-	mySummary := Dictionary new.
+	mySummary := CTDictionary new.
 		
 	"rotate my resultset"
 	myValuesDict := self rotate: self resultset.
@@ -566,7 +568,7 @@ CTDataFrame >> summarize [
 	myValuesDict keysDo: [ :groupKey |
 		myData := myValuesDict at: groupKey.
 
-		myResults := Dictionary new.
+		myResults := CTDictionary new.
 		( ( self metaData at: (groupKey asSymbol ) ) = 'Number' ) ifTrue: [
 			myResults at: 'max' put: ( ( myData max ) round: 2 ); 
 				at: 'min' put: ( ( myData min ) round: 2 ); 
@@ -602,7 +604,7 @@ CTDataFrame >> summarize [
 { #category : 'printing' }
 CTDataFrame >> toJsonString [
 
-	"returns the series as a JSON string"
+	"returns 'series' data as a JSON string - could be more defensive here in terms of making sure that 'series' has been populated etc."
 	^ NeoJSONWriter toString: self series.
 ]
 
